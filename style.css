@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    min-height: 100vh;
+
+    /* Itt adjuk meg a kezdő színeket */
+    background: linear-gradient(45deg, #2e4d23, #4caf50, #2196f3, #009688);
+    background-size: 400% 400%;
+    /* Ez fontos: nagyobbra vesszük a hátteret, hogy legyen mit mozgatni */
+
+    /* Az animáció neve, hossza (15 másodperc), és hogy végtelen legyen */
+    animation: gradient-animation 15s ease infinite;
+}
+
+/* Itt definiáljuk, mit csináljon az animáció */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#tarolo {
+    #tarolo {
+        /* ... a többi kódod marad ... */
+        animation: lebeges 4s ease-in-out infinite;
+    }
+
+    @keyframes lebeges {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+            /* Kicsit feljebb úszik */
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #00000070;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #00bfff;
+    font-size: 40px;
+}
+
+h2 {
+    color: #00bfff;
+    margin-top: 30px;
+}
+
+#profilkep {
+    width: 200px;
+    border-radius: 20px;
+
+    border: 3px solid #00bfff;
+
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-position: inside;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#focim {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-size: 40px;
+}
+
+/* A menü sávja */
+.ablak-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.8);
+    padding-top: 10px;
+    z-index: 1000;
+}
+
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    gap: 5px;
+    /* Távolság a "fülek" között */
+}
+
+.tab {
+    background: #333;
+    /* Alap szürke, mint egy inaktív ablak */
+    border-radius: 8px 8px 0 0;
+    /* Csak a felső sarkok kerekítettek */
+    padding: 10px 20px;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+}
+
+.tab a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Amikor rátolod az egeret */
+.tab:hover {
+    background: #444;
+}
+
+.tab:hover a {
+    color: white;
+}
+
+/* Az aktív fül (ami épp ki van választva) */
+.tab.active {
+    background: #2e4d23;
+    /* Vagy a te szürkéd/kéked: #4fc3f7 */
+    border-bottom: 2px solid #4fc3f7;
+    /* Egy élénk csík az aljára */
+}
+
+.tab.active a {
+    color: white;
+}
+
+/* Hogy ne takarja ki a szöveget a fix menü */
+main {
+    margin-top: 80px;
+}
+
+#tarolo {
+    border-top: 30px solid #333;
+    /* Ez lesz az ablak "fejléce" */
+    position: relative;
+    /* ... a többi marad ... */
+}
+
+/* Kis gombok az ablak sarkába (csak dísznek) */
+#tarolo::before {
+    content: "🙂😁😊";
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    color: #ff5f56;
+    /* Piros, sárga, zöld pöttyök mint Mac-en */
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.vissza-gomb {
+    display: inline-block;
+    color: #000;            /* Fekete betűszín, hogy jól olvasható legyen */
+    background-color: #4fc3f7; /* Mindig látható kék háttér */
+    text-decoration: none;
+    padding: 12px 35px;     /* Kicsit nagyobb, hogy kényelmes legyen */
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;           /* Nem kell keret, ha van háttere */
+}
+
+/* Csak egy kis fényerő változás, ha ráviszed az egeret */
+.vissza-gomb:hover {
+    background-color: #fff; /* Fehérre vált, ha rámutatsz */
+    color: #000;
+    transform: scale(1.05); /* Kicsit megnő */
+}
+.udvozles {
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;         /* Ez egy kényelmesebb, de még mindig nagy méret */
+    color: #11142c;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: block;
+    line-height: 1.3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+/* Az elérhetőség doboz a jobb alsó sarokban */
+.elerhetoseg-doboz {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    background: rgba(13, 40, 71, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #4fc3f7;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.elerhetoseg-doboz h3 {
+    color: #4fc3f7;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.elerhetoseg-doboz span {
+    font-size: 0.9rem;
+    color: #4fc3f7;
+}
