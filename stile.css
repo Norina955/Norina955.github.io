@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #1a2536 0%, #0d131a 100%);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #fff;
+}
+
+.countdown-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.countdown-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #4ade80; /* Motiváló zöld szín */
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.2);
+}
+
+.countdown {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.time-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 110px;
+    border-bottom: 4px solid #4ade80;
+}
+
+.time-box span {
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: block;
+    font-family: monospace; /* Hogy a számok ne ugráljanak váltáskor */
+}
+
+.time-box p {
+    margin: 8px 0 0 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+#expired-message {
+    font-size: 2rem;
+    color: #f43f5e;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+.back-btn {
+    display: inline-block;
+    background-color: #20d1e9; /* Az órarendnél használt világoskék szín */
+    color: #000;               /* Fekete szöveg */
+    text-decoration: none;     /* Aláhúzás eltávolítása */
+    padding: 10px 25px;        /* Gomb belső mérete */
+    border-radius: 10px;       /* Lekerekített sarkok */
+    font-weight: bold;         /* Félkövér szöveg */
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 25px;          /* Távolság a számláló doboztól */
+    transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #32e8f5; /* Sötétebb kék, ha ráviszed az egeret */
+}
+/* A menü sávja */
+.ablak-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.8);
+    padding-top: 10px;
+    z-index: 1000;
+}
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    gap: 10px;
+}
+
+.tab {
+    background: #333;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+}
+
+.tab a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+}
+
+.tab.active {
+    background: #4fc3f7; /* Aktív fül kék színe */
+    border-bottom: 3px solid white;
+}
+
+.tab.active a {
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Hajszálpontosan ugyanaz a zöld átmenet, mint a főoldalon */
+    background: radial-gradient(circle, #4db67c 0%, #0e0847 100%); 
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+/* Felső sötétzöld menüsor rögzítése (ha van az oldalon) */
+.ablak-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #123225;
+    padding: 10px 0;
+    z-index: 1000;
+}
+/* Menü sáv felül */
+.ablak-menu {
+    background: rgba(20, 20, 20, 0.9);
+    padding-top: 10px;
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    gap: 10px;
+}
+
+.tab {
+    background: #333;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+}
+
+.tab a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+}
+
+.tab.active {
+    background: #4fc3f7; /* Aktív fül kék színe */
+    border-bottom: 3px solid white;
+}
+
+.tab.active a {
+    color: black;
+}

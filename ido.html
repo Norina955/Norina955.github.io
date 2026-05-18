@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suli Vége Visszaszámláló</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<header class="ablak-menu">
+    <nav>
+        <ul class="tabs">
+            <li class="tab"><a href="index.html"><span>🏠</span> Rólam</a></li>
+            <li class="tab"><a href="orarend.html"><span>📅</span> Órarend</a></li>
+            <li class="tab active"><a href="ido.html"><span>⌛</span> Visszaszámlálás</a></li>
+            <li class="tab"><a href="osztaly.html"><span>👥</span> Osztály-névsor</a></li>
+        </ul>
+        </ul>
+    </nav>
+</header>
+<body>
+
+    <div class="countdown-container">
+        <h2>A SULI VÉGÉIG HÁTRALÉVŐ IDŐ:</h2>
+
+        <div class="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Nap</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Óra</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Perc</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>Másodperc</p>
+            </div>
+        </div>
+
+        <p id="expired-message" class="hidden"></p>
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">← Vissza a főoldalra</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

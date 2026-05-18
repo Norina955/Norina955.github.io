@@ -233,8 +233,8 @@ main {
 }
 /* Az elérhetőség doboz a jobb alsó sarokban */
 .elerhetoseg-doboz {
-    position: fixed;
-    bottom: 80px;
+    position: absolute; /* ÁTÍRVA: fixed helyett absolute, így nem jön veled */
+    bottom: 40px;       /* Picit lejjebb vettem (80-ról 40-re), hogy szebben üljön az ablak alján */
     right: 30px;
     background: rgba(13, 40, 71, 0.9);
     padding: 20px;
@@ -255,4 +255,150 @@ main {
 .elerhetoseg-doboz span {
     font-size: 0.9rem;
     color: #4fc3f7;
+}
+
+
+#szelso-kep {
+    position: absolute;
+    right: 30px;
+    top: 170px;                 /* EZT ÍRD ÁT: 230px-ről 170px-re */
+    width: 200px;               
+    height: auto;
+    background: rgba(13, 40, 71, 0.6); 
+    padding: 8px;               
+    border-radius: 15px;        
+    border: 1px solid #4fc3f7;  
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 998;
+}
+    
+/* A teljes linkgyűjtő doboz */
+.suli-linkek-doboz {
+    position: absolute;
+    right: 30px;
+    bottom: 250px;              /* Kicsit feljebb emeltem, hogy a két gomb kényelmesen elférjen az Elérhetőség felett */
+    background: rgba(13, 40, 71, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #4fc3f7;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 200px;               /* Pontosan egyforma széles az Elérhetőség dobozzal */
+    box-sizing: border-box;
+}
+
+.suli-linkek-doboz h3 {
+    color: #4fc3f7;
+    margin: 0 0 12px 0;
+    font-size: 1.1rem;
+}
+
+/* A gombokat egymás alá rendező tároló */
+.gombok-tarolo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                  /* Távolság a két gomb között */
+}
+
+/* Közös gomb formázás */
+.suli-btn {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+/* A KRÉTA gomb új lilás-kékes ruhája */
+.kreta-szin {
+    background-color: #4c2be2; /* BlueViolet - szép, élénk lila, ami kiugrik a sötét háttérből */
+}
+
+.kreta-szin:hover {
+    background-color: #4169e1; /* RoyalBlue - királykék, amikor az egér rácsúszik */
+}
+
+/* 2. Suli weboldal gomb egyedi zöldes-kékes színe (ami passzol az oldaladhoz) */
+.suli-szin {
+    background-color: #00796b;
+}
+.suli-szin:hover {
+    background-color: #009688;
+}
+.bal-osztaly-doboz {
+    position: absolute;
+    left: 40px;
+    top: 110px;                 /* EZ TOLJA MÉG FELJEBB: Így már tökéletesen a felső sáv alá ugrik */
+    z-index: 998;
+}
+
+.bal-osztaly-doboz h2 {
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5.5rem;          
+    font-weight: bold;
+    /* Egy sötétebb árnyékot adtam hozzá, hogy a világosabb felső háttéren is brutál jól olvasható legyen: */
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4), 0px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+.matrica {
+    position: fixed;            /* Fixen a képernyőhöz rögzítve, nem mozdul el görgetésnél */
+    font-size: 2.5rem;          /* Jó nagy, jól látható méret */
+    z-index: 1;                 /* A háttér felett, de a szöveges ablak mögött lesznek, hogy ne zavarjanak */
+    user-select: none;          /* Ne lehessen véletlenül kijelölni őket egérrel */
+    opacity: 0.85;              /* Egy picit áttetszők, hogy szépen belesimuljanak a dizájnba */
+    filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.3)); /* Kis árnyék, mintha kiemelkednének */
+}
+
+/* 1. matrica: Csillogás a 9/D felirat mellett */
+.m1 { top: 120px; left: 240px; transform: rotate(15deg); font-size: 2rem; }
+
+/* 5. matrica: Csillag a bal oldalon középen */
+.m5 { top: 450px; left: 100px; transform: rotate(5deg); }
+.matrica {
+    position: fixed;            /* Fixen a helyükön maradnak */
+    z-index: 1;                 /* A szöveges dobozok mögött, de a háttér felett */
+    pointer-events: none;       /* Az egér átlát rajtuk, nem zavarják a kattintást */
+    user-select: none;
+    filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.15)); /* Finom kis árnyék */
+}
+
+/* 1. Dínó matrica (Balra fent, a 9/D felirat alatt kicsivel) */
+.m6 { 
+    top: 240px; 
+    left: 60px; 
+    width: 110px;               /* Szép nagy méret, mint a képen */
+}
+
+/* 2. Totoro matrica (Balra lent, az esernyős) */
+.m8 { 
+    bottom: 40px; 
+    left: 45px; 
+    width: 170px;               /* Jó széles, hogy látszódjanak a részletek */
+}
+
+/* 3. Cuki szemüveges cica matrica (Lent középen, kicsit becsúszva az ablak alá) */
+.m9 { 
+    bottom: -10px;              /* Egy picit lejjebb lóg a képernyőről, pont mint a képen */
+    left: 50%;
+    transform: translateX(-50%); /* Ez a varázslat pont középre rakja a cicát! */
+    width: 110px; 
+    z-index: 0;                 /* Teljesen a nagy ablak mögé kényszerítjük */
+}
+
+/* 4. Kis sárga csillag matrica (A dínó és Totoro között bal oldalon) */
+.m4 { 
+    top: 480px; 
+    left: 110px; 
+    width: 35px;                /* Cuki pici méret */
+}
+.m7 {
+    
 }
